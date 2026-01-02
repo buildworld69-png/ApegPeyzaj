@@ -1,12 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Apeg Peyzaj</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APEG Peyzaj | Anasayfa</title>
+  <meta name="description" content="APEG Peyzaj: Fidan, ağaç ve peyzaj ürünleri için kurumsal çözüm ortağınız." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <h1>Apeg Peyzaj</h1>
-  <p>Cloudflare Pages test yayını.</p>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="badge">📞 <a href="tel:+905473386161"><strong>+90 547 338 61 61</strong></a></span>
+        <span class="badge">✉️ <a href="mailto:apeggrup34@gmail.com"><strong>apeggrup34@gmail.com</strong></a></span>
+      </div>
+      <div class="topbar-right">
+        <span class="badge"><strong>TR</strong> | Türkçe</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <div class="name">APEG Peyzaj</div>
+          <div class="tag">Fidan & Peyzaj Çözümleri</div>
+        </div>
+      </a>
+
+      <nav class="nav" data-nav>
+        <a href="index.html" data-navlink>Anasayfa</a>
+        <a href="about.html" data-navlink>Hakkımızda</a>
+        <a href="products.html" data-navlink>Ürünler</a>
+        <a href="contact.html" data-navlink>İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn ghost mobile-toggle" type="button" data-mobile-toggle>Menü</button>
+        <a class="btn primary" href="contact.html">Teklif / İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-grid">
+        <div>
+          <h1>Doğadan ilham alan<br/>kalıcı peyzaj çözümleri</h1>
+
+          <p>
+            APEG Peyzaj olarak; fidan, ağaç ve peyzaj uygulamalarında ihtiyaçlarınıza uygun seçenekler sunarız.
+            Ürün kategorilerimizi inceleyin, proje detaylarınız için bizimle iletişime geçin.
+          </p>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="about.html">Daha fazla bilgi</a>
+            <a class="btn" href="products.html">Ürünlere göz at</a>
+          </div>
+
+          <div style="height:14px"></div>
+
+          <div class="badge" style="display:inline-flex;">
+            Not: Hero görseli için <strong>assets/img/hero.jpg</strong> dosyasını yükleyince otomatik görünür.
+          </div>
+        </div>
+
+        <div class="hero-cards">
+          <div class="mini-card">
+            <div class="t">Hızlı İletişim</div>
+            <div class="d">Telefon veya e-posta ile hızlı dönüş alabilirsiniz.</div>
+          </div>
+          <div class="mini-card">
+            <div class="t">Kategori Bazlı Ürün Yapısı</div>
+            <div class="d">Çalı, ibreli, yapraklı ve sarmaşıklar ayrı ayrı düzenlenebilir.</div>
+          </div>
+          <div class="mini-card">
+            <div class="t">Temiz Altyapı</div>
+            <div class="d">Önce iskeleti kuruyoruz; ürünleri ve görselleri sonra rahatça eklersiniz.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ürün Kategorileri</h2>
+        <p>Şimdilik altyapı hazır. Ürünleri daha sonra kategoriye göre ekleyeceksiniz.</p>
+      </div>
+
+      <div class="grid cols-4">
+        <a class="card" href="products.html#cali">
+          <div class="icon">Ç</div>
+          <h3>Çalı Ağaçlar</h3>
+          <p>Çalı grubu ürünleri (isim + görselleri sonra eklenecek).</p>
+          <span class="link">Kategoriye git →</span>
+        </a>
+
+        <a class="card" href="products.html#ibreli">
+          <div class="icon">İ</div>
+          <h3>İbreli Ağaçlar</h3>
+          <p>İbreli türler için düzenli ürün alanı.</p>
+          <span class="link">Kategoriye git →</span>
+        </a>
+
+        <a class="card" href="products.html#yaprakli">
+          <div class="icon">Y</div>
+          <h3>Yapraklı Ağaçlar</h3>
+          <p>Yapraklı türler için kategori altyapısı hazır.</p>
+          <span class="link">Kategoriye git →</span>
+        </a>
+
+        <a class="card" href="products.html#sarmasik">
+          <div class="icon">S</div>
+          <h3>Sarmaşıklar</h3>
+          <p>Sarmaşık grubu için ayrı bölüm.</p>
+          <span class="link">Kategoriye git →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> APEG Peyzaj</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="tel:+905473386161">+90 547 338 61 61</a>
+        <span>•</span>
+        <a href="mailto:apeggrup34@gmail.com">apeggrup34@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
