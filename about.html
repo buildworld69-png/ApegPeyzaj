@@ -1,1 +1,103 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APEG Peyzaj | Hakkımızda</title>
+  <meta name="description" content="APEG Peyzaj hakkında: Fidan ve peyzaj ürünleriyle kurumsal çözüm yaklaşımı." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="badge">📞 <a href="tel:+905473386161"><strong>+90 547 338 61 61</strong></a></span>
+        <span class="badge">✉️ <a href="mailto:apeggrup34@gmail.com"><strong>apeggrup34@gmail.com</strong></a></span>
+      </div>
+      <div class="topbar-right">
+        <span class="badge"><strong>TR</strong> | Türkçe</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <div class="name">APEG Peyzaj</div>
+          <div class="tag">Fidan & Peyzaj Çözümleri</div>
+        </div>
+      </a>
+
+      <nav class="nav" data-nav>
+        <a href="index.html" data-navlink>Anasayfa</a>
+        <a href="about.html" data-navlink>Hakkımızda</a>
+        <a href="products.html" data-navlink>Ürünler</a>
+        <a href="contact.html" data-navlink>İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn ghost mobile-toggle" type="button" data-mobile-toggle>Menü</button>
+        <a class="btn primary" href="contact.html">Teklif / İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="page-hero">
+        <h1>Hakkımızda</h1>
+        <p>
+          APEG Peyzaj; fidan ve peyzaj ürünleri tarafında, ihtiyaçlara göre doğru ürün-kategori yapısını kurmayı hedefleyen,
+          düzenli ve ölçeklenebilir bir altyapıyla çalışan bir yaklaşıma sahiptir.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin:0 0 8px;">Çalışma yaklaşımı</h3>
+        <p style="margin:0; color: var(--muted);">
+          Bu web sitesinde önce “iskelet” kurguyu kurduk: üst bar iletişim, menü yapısı, anasayfa hero alanı ve ürün kategorileri.
+          Ürünler sayfasında her kategori için ayrı bölüm hazır; siz daha sonra her kategoriye ürün isimleri ve görsellerini ekleyeceksiniz.
+        </p>
+
+        <hr class="sep"/>
+
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="icon">✓</div>
+            <h3>Düzenli içerik yönetimi</h3>
+            <p>Kategoriler ayrı; içerikler zamanla büyürken site dağılmaz.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚙</div>
+            <h3>Basit ve hızlı altyapı</h3>
+            <p>Cloudflare Pages ile otomatik yayın; GitHub commit ile güncelleme.</p>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+        <a class="btn primary" href="products.html">Ürün kategorilerine geç</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> APEG Peyzaj</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="tel:+905473386161">+90 547 338 61 61</a>
+        <span>•</span>
+        <a href="mailto:apeggrup34@gmail.com">apeggrup34@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
