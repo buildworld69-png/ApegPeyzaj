@@ -74,7 +74,7 @@ img{max-width:100%;display:block}
   padding:14px 0;
   gap:16px;
 }
-.brand{display:flex;align-items:center;gap:10px}
+.brand{display:flex;align-items:center;gap:22px}
 
 /* LOGO – mavi kareyi kaldır, sadece logo kalsın */
 .brand__mark{
@@ -412,3 +412,11 @@ img{max-width:100%;display:block}
   font-size:13px;
 }
 .footer__muted{color: rgba(234,240,255,.60)}
+
+@media (max-width: 560px){
+  .brand__mark img{
+    height:110px;   /* mobil için */
+  }
+  .brand{gap:16px;}
+}
+
