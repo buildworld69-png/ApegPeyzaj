@@ -84,7 +84,7 @@ img{max-width:100%;display:block}
 
 /* Logo boyutu – kareden biraz daha büyük */
 .brand__mark img{
-  height:52px;   /* isterseniz 48px yapabilirsiniz */
+  height:160px;   /* isterseniz 48px yapabilirsiniz */
   width:auto;
 }
 
