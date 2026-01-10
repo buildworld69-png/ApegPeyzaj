@@ -75,11 +75,19 @@ img{max-width:100%;display:block}
   gap:16px;
 }
 .brand{display:flex;align-items:center;gap:10px}
+
+/* LOGO – mavi kareyi kaldır, sadece logo kalsın */
 .brand__mark{
-  width:38px;height:38px;border-radius:12px;
-  background: linear-gradient(135deg, rgba(100,209,156,.95), rgba(79,182,255,.85));
-  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  display:flex;
+  align-items:center;
 }
+
+/* Logo boyutu – kareden biraz daha büyük */
+.brand__mark img{
+  height:52px;   /* isterseniz 48px yapabilirsiniz */
+  width:auto;
+}
+
 .brand__text{font-size:16px;color:var(--text);letter-spacing:.2px}
 
 .nav{
