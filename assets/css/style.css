@@ -393,7 +393,7 @@ img{max-width:100%;display:block}
   align-items:flex-start;
   flex-wrap:wrap;
 }
-.footer__brand{font-size:16px}
+.footer__brand{font-size:16px; color:#ffffff;}
 .footer__text{margin:8px 0 0; color: var(--muted); max-width: 52ch}
 .footer__cols{display:flex; gap:28px; flex-wrap:wrap}
 .footer__col{display:grid; gap:8px; min-width: 160px}
