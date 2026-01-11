@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İbreli Ağaçlar | APEG Peyzaj</title>
-  <meta name="description" content="İbreli ağaçlar kategorisinde projelerinize uygun fidan ve bitki türlerini inceleyin. APEG Peyzaj üretim ve tedarik desteği sunar." />
+  <title>İbreli Ağaçlar | APEG Peyzaj – Ürün Kataloğu</title>
+  <meta name="description" content="APEG Peyzaj’ın ibreli ağaç türleri. Ladin, ardıç, mazı ve farklı ibreli türler için görsel ürün kataloğu." />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Google tag (gtag.js) -->
@@ -30,12 +30,9 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="APEG Peyzaj Anasayfa">
+      <a class="brand" href="index.html" aria-label=" Anasayfa">
         <span class="brand__mark" aria-hidden="true">
           <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
-        </span>
-        <span class="brand__text">
-          <strong>APEG</strong> Peyzaj
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" data-nav-toggle>
@@ -51,36 +48,121 @@
     </div>
   </header>
 
+  <!-- BURADAN SONRASI sayfanın asıl içeriği -->
   <main class="section">
     <div class="container">
       <div class="section__head">
-        <h1 class="section__title">İbreli Ağaçlar</h1>
+        <h1 class="section__title">İbreli Ağaç Türleri</h1>
         <p class="section__desc">
-          Bu sayfa ibreli ağaç türlerine ayrılmıştır. Daha sonra tek tek ürün kartlarına,
-          bitki isimlerini, boy ölçülerini ve görselleri ekleyeceksiniz.
+          Aşağıda, projelerinizde sık kullanılan bazı ibreli ağaç türlerine ait örnek görseller bulunmaktadır.
+          Görsele tıkladığınızda, fotoğrafı büyük boyutta inceleyebilirsiniz. İstediğiniz zaman yeni türler
+          ekleyip çıkarabiliriz.
         </p>
       </div>
 
-      <section class="product-section">
-        <div class="product-section__head">
-          <h2>İbreli Ağaçlar – Ürün Listesi</h2>
-          <a class="link" href="contact.html">Bilgi al</a>
-        </div>
-        <div class="product-grid">
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-        </div>
-      </section>
+      <div class="catalog-grid">
+        <!-- ÖRNEK KARTLAR – sadece dosya adlarını kendi resimlerinize göre değiştireceksiniz -->
+
+        <!-- Kart 1 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/ibreli/mavi-ladin.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/ibreli/mavi-ladin.jpg" alt="Mavi Ladin / Picea pungens 'Glauca'">
+          </div>
+          <div class="catalog-item__label">
+            Mavi Ladin
+            <span class="catalog-item__latin">Picea pungens 'Glauca'</span>
+          </div>
+        </button>
+
+        <!-- Kart 2 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/ibreli/bati-ladini.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/ibreli/bati-ladini.jpg" alt="Batı Ladini / Picea abies">
+          </div>
+          <div class="catalog-item__label">
+            Batı Ladini
+            <span class="catalog-item__latin">Picea abies</span>
+          </div>
+        </button>
+
+        <!-- Kart 3 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/ibreli/konik-ladin.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/ibreli/konik-ladin.jpg" alt="Konik Ladin / Picea conica">
+          </div>
+          <div class="catalog-item__label">
+            Konik Ladin
+            <span class="catalog-item__latin">Picea conica</span>
+          </div>
+        </button>
+
+        <!-- Kart 4 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/ibreli/kalem-ardic.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/ibreli/kalem-ardic.jpg" alt="Kalem Ardıç / Juniperus virginiana 'Skyrocket'">
+          </div>
+          <div class="catalog-item__label">
+            Kalem Ardıç
+            <span class="catalog-item__latin">Juniperus virginiana 'Skyrocket'</span>
+          </div>
+        </button>
+
+        <!-- İstediğiniz kadar yeni kart ekleyebilirsiniz; aynı yapıyı kopyalayın -->
+      </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__bottom">
-      <span>© <span id="year"></span> APEG Peyzaj</span>
-      <span class="footer__muted">Tüm hakları saklıdır.</span>
+  <!-- Büyük resim penceresi -->
+  <div class="catalog-lightbox" id="catalogLightbox" aria-hidden="true">
+    <div class="catalog-lightbox__inner">
+      <button class="catalog-lightbox__close" type="button" aria-label="Kapat">&times;</button>
+      <img class="catalog-lightbox__image" id="lightboxImage" src="" alt="">
+      <div class="catalog-lightbox__caption" id="lightboxCaption"></div>
     </div>
-  </footer>
+  </div>
+
+  <!-- Galeri için JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const items = document.querySelectorAll('.catalog-item');
+      const lightbox = document.getElementById('catalogLightbox');
+      const imageEl = document.getElementById('lightboxImage');
+      const captionEl = document.getElementById('lightboxCaption');
+      const closeBtn = lightbox.querySelector('.catalog-lightbox__close');
+
+      items.forEach(function (item) {
+        item.addEventListener('click', function () {
+          const imgSrc = item.getAttribute('data-image');
+          const label = item.querySelector('.catalog-item__label').innerText.trim();
+
+          imageEl.src = imgSrc;
+          imageEl.alt = label;
+          captionEl.textContent = label;
+
+          lightbox.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        imageEl.src = '';
+        document.body.style.overflow = '';
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    });
+  </script>
 
   <script src="assets/js/main.js"></script>
 </body>
