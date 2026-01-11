@@ -329,6 +329,136 @@ img{max-width:100%;display:block}
   text-align:center;
 }
 
+/* Kategori ürün galerisi (kartlı görünüm + büyük resim) */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-item {
+  background: rgba(4, 16, 25, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(234, 240, 255, 0.10);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item__image {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 oran */
+  overflow: hidden;
+}
+
+.catalog-item__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.catalog-item:hover .catalog-item__image img {
+  transform: scale(1.05);
+}
+
+.catalog-item__label {
+  background: #23a455; /* yeşil şerit */
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.catalog-item__latin {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-top: 4px;
+}
+
+/* Büyük resim penceresi (lightbox) */
+.catalog-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.catalog-lightbox.is-open {
+  display: flex;
+}
+
+.catalog-lightbox__inner {
+  max-width: min(960px, 100%);
+  max-height: 90vh;
+  background: #041019;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.catalog-lightbox__image {
+  display: block;
+  max-width: 100%;
+  max-height: 76vh;
+  border-radius: 14px;
+}
+
+.catalog-lightbox__caption {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(234, 240, 255, 0.9);
+}
+
+.catalog-lightbox__close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  color: rgba(234, 240, 255, 0.8);
+  cursor: pointer;
+}
+
+.catalog-lightbox__close:hover {
+  color: #ffffff;
+}
+
+
 /* Contact */
 .contact-grid{
   display:grid;
