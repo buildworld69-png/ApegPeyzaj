@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarmaşıklar | APEG Peyzaj</title>
-  <meta name="description" content="Sarmaşıklar kategorisinde projelerinize uygun tırmanıcı ve yer örtücü bitki türlerini inceleyin. APEG Peyzaj üretim ve tedarik desteği sunar." />
+  <title>Sarmaşıklar | APEG Peyzaj – Ürün Kataloğu</title>
+  <meta name="description" content="Duvar, çit, pergola ve yüzey kaplama uygulamalarında kullanılan sarmaşık ve tırmanıcı bitki türleri. APEG Peyzaj ürün kataloğu." />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Google tag (gtag.js) -->
@@ -30,12 +30,9 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="APEG Peyzaj Anasayfa">
+      <a class="brand" href="index.html" aria-label="Anasayfa">
         <span class="brand__mark" aria-hidden="true">
           <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
-        </span>
-        <span class="brand__text">
-          <strong>APEG</strong> Peyzaj
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" data-nav-toggle>
@@ -56,31 +53,108 @@
       <div class="section__head">
         <h1 class="section__title">Sarmaşıklar</h1>
         <p class="section__desc">
-          Bu sayfa sarmaşık ve tırmanıcı bitki türleri için ayrılmıştır.
-          Daha sonra her bir tür için ayrı ürün kartı ve görseller ekleyeceksiniz.
+          Duvar, çit, pergola ve yüzey kaplama projelerinde kullanılan bazı sarmaşık ve tırmanıcı bitki türlerine ait
+          örnek görseller yer almaktadır. Görsellere tıklayarak fotoğrafları büyük boyutta inceleyebilirsiniz.
         </p>
       </div>
 
-      <section class="product-section">
-        <div class="product-section__head">
-          <h2>Sarmaşıklar – Ürün Listesi</h2>
-          <a class="link" href="contact.html">Bilgi al</a>
-        </div>
-        <div class="product-grid">
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-          <div class="product-placeholder">Ürün kartı (sonra eklenecek)</div>
-        </div>
-      </section>
+      <div class="catalog-grid">
+        <!-- Kart 1 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/sarmasik/sarmasik-1.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/sarmasik/sarmasik-1.jpg" alt="Sarmaşık Türü 1">
+          </div>
+          <div class="catalog-item__label">
+            Sarmaşık Türü 1
+            <span class="catalog-item__latin">Latince adı buraya</span>
+          </div>
+        </button>
+
+        <!-- Kart 2 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/sarmasik/sarmasik-2.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/sarmasik/sarmasik-2.jpg" alt="Sarmaşık Türü 2">
+          </div>
+          <div class="catalog-item__label">
+            Sarmaşık Türü 2
+            <span class="catalog-item__latin">Latince adı buraya</span>
+          </div>
+        </button>
+
+        <!-- Kart 3 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/sarmasik/sarmasik-3.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/sarmasik/sarmasik-3.jpg" alt="Sarmaşık Türü 3">
+          </div>
+          <div class="catalog-item__label">
+            Sarmaşık Türü 3
+            <span class="catalog-item__latin">Latince adı buraya</span>
+          </div>
+        </button>
+
+        <!-- Kart 4 -->
+        <button class="catalog-item" type="button"
+                data-image="assets/img/sarmasik/sarmasik-4.jpg">
+          <div class="catalog-item__image">
+            <img src="assets/img/sarmasik/sarmasik-4.jpg" alt="Sarmaşık Türü 4">
+          </div>
+          <div class="catalog-item__label">
+            Sarmaşık Türü 4
+            <span class="catalog-item__latin">Latince adı buraya</span>
+          </div>
+        </button>
+      </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__bottom">
-      <span>© <span id="year"></span> APEG Peyzaj</span>
-      <span class="footer__muted">Tüm hakları saklıdır.</span>
+  <div class="catalog-lightbox" id="catalogLightbox" aria-hidden="true">
+    <div class="catalog-lightbox__inner">
+      <button class="catalog-lightbox__close" type="button" aria-label="Kapat">&times;</button>
+      <img class="catalog-lightbox__image" id="lightboxImage" src="" alt="">
+      <div class="catalog-lightbox__caption" id="lightboxCaption"></div>
     </div>
-  </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const items = document.querySelectorAll('.catalog-item');
+      const lightbox = document.getElementById('catalogLightbox');
+      const imageEl = document.getElementById('lightboxImage');
+      const captionEl = document.getElementById('lightboxCaption');
+      const closeBtn = lightbox.querySelector('.catalog-lightbox__close');
+
+      items.forEach(function (item) {
+        item.addEventListener('click', function () {
+          const imgSrc = item.getAttribute('data-image');
+          const label = item.querySelector('.catalog-item__label').innerText.trim();
+
+          imageEl.src = imgSrc;
+          imageEl.alt = label;
+          captionEl.textContent = label;
+
+          lightbox.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        imageEl.src = '';
+        document.body.style.overflow = '';
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    });
+  </script>
 
   <script src="assets/js/main.js"></script>
 </body>
