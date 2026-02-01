@@ -8,10 +8,34 @@
   <meta name="description" content="APEG Peyzaj; sert zemin uygulamaları, taş duvar ve bordür, pergola ve kamelya, çocuk oyun parkları, fitness alanları ve sulama altyapı sistemleri ile anahtar teslim peyzaj çözümleri sunar." />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Bu sayfaya özel: görseller kutuyu doldursun + 2 sütun büyük görünüm -->
+  <style>
+    .yapisal-gallery{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:0;
+    }
+    @media (max-width: 560px){
+      .yapisal-gallery{ grid-template-columns: 1fr; }
+    }
+
+    /* Kartların daha dolu görünmesi için oranı büyüt */
+    .yapisal-gallery .catalog-item__image{
+      padding-top: 62%; /* daha büyük */
+    }
+
+    /* Etiket şeridini biraz incelt */
+    .yapisal-gallery .catalog-item__label{
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Top Bar (index ile aynı) -->
+  <!-- Top Bar -->
   <div class="topbar">
     <div class="container topbar__inner">
       <div class="topbar__left">
@@ -26,7 +50,7 @@
     </div>
   </div>
 
-  <!-- Header (index ile aynı) -->
+  <!-- Header -->
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="index.html" aria-label="APEG Peyzaj Anasayfa">
@@ -51,8 +75,7 @@
 
   <!-- Hero -->
   <section class="hero" aria-label="Yapısal İşler">
-    <!-- Kapak görseli: senin yüklediğin görsellerden kullandım -->
-    <div class="hero__bg" style="background-image:url('assets/img/yapisal/Zemin%20Uygulama%201.jpg');"></div>
+    <div class="hero__bg" style="background-image:url('assets/img/yapisal/Zemin Uygulama 1.jpg');"></div>
     <div class="hero__overlay"></div>
 
     <div class="container hero__inner">
@@ -60,14 +83,13 @@
         <p class="hero__kicker">Yapısal Peyzaj Uygulamaları</p>
         <h1 class="hero__title">Yapısal İşler</h1>
         <p class="hero__text">
-          Sert zemin uygulamalarından oyun parklarına, altyapıdan pergola sistemlerine kadar
-          peyzaj projelerinde ihtiyaç duyulan yapısal imalatları anahtar teslim olarak gerçekleştiriyoruz.
+          Peyzaj projelerinde sert zemin, taş duvar, pergola/kamelya, oyun parkı, fitness alanı ve sulama-altyapı
+          gibi yapısal imalatları anahtar teslim gerçekleştiriyoruz.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Content -->
   <main class="section">
     <div class="container">
       <div class="section__head">
@@ -78,23 +100,19 @@
       <!-- 1) Sert Zemin -->
       <div class="content">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Zemin%20Uygulama%201.jpg"
-                 data-caption="Sert Zemin Uygulamaları">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Zemin Uygulama 1.jpg','Sert Zemin Uygulamaları')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Zemin%20Uygulama%201.jpg" alt="Sert Zemin Uygulama 1">
+                <img src="assets/img/yapisal/Zemin Uygulama 1.jpg" alt="Sert Zemin Uygulama 1">
               </div>
-              <div class="catalog-item__label">Sert Zemin</div>
+              <div class="catalog-item__label">Sert Zemin Uygulama 1</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Zemin%20Uygulama%202.jpg"
-                 data-caption="Sert Zemin Uygulamaları">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Zemin Uygulama 2.jpg','Sert Zemin Uygulamaları')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Zemin%20Uygulama%202.jpg" alt="Sert Zemin Uygulama 2">
+                <img src="assets/img/yapisal/Zemin Uygulama 2.jpg" alt="Sert Zemin Uygulama 2">
               </div>
-              <div class="catalog-item__label">Sert Zemin</div>
+              <div class="catalog-item__label">Sert Zemin Uygulama 2</div>
             </div>
           </div>
         </div>
@@ -102,8 +120,7 @@
         <div class="content__box">
           <h2>Sert Zemin Uygulamaları</h2>
           <p class="muted">
-            Kilit taşı, bordür, yürüyüş yolları, meydan ve çevre düzenleme alanlarında
-            uzun ömürlü ve estetik sert zemin imalatları yapıyoruz.
+            Kilit taşı, bordür, yürüyüş yolları, meydan ve çevre düzenleme alanlarında uzun ömürlü ve estetik sert zemin imalatları yapıyoruz.
           </p>
         </div>
       </div>
@@ -111,23 +128,19 @@
       <!-- 2) Taş Duvar & Bordür -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Ta%C5%9F%20duvar%201.jpg"
-                 data-caption="Taş Duvar ve Bordür">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Taş duvar 1.jpg','Taş Duvar ve Bordür')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Ta%C5%9F%20duvar%201.jpg" alt="Taş Duvar 1">
+                <img src="assets/img/yapisal/Taş duvar 1.jpg" alt="Taş duvar 1">
               </div>
-              <div class="catalog-item__label">Taş Duvar</div>
+              <div class="catalog-item__label">Taş Duvar 1</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Ta%C5%9F%20Duvar%202.jpeg"
-                 data-caption="Taş Duvar ve Bordür">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Taş Duvar 2.jpeg','Taş Duvar ve Bordür')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Ta%C5%9F%20Duvar%202.jpeg" alt="Taş Duvar 2">
+                <img src="assets/img/yapisal/Taş Duvar 2.jpeg" alt="Taş Duvar 2">
               </div>
-              <div class="catalog-item__label">Taş Duvar</div>
+              <div class="catalog-item__label">Taş Duvar 2</div>
             </div>
           </div>
         </div>
@@ -135,8 +148,7 @@
         <div class="content__box">
           <h2>Taş Duvar ve Bordür</h2>
           <p class="muted">
-            İstinat duvarları, doğal taş uygulamaları ve bordür imalatları ile
-            hem fonksiyonel hem görsel açıdan güçlü çözümler sunuyoruz.
+            İstinat duvarları, doğal taş uygulamaları ve bordür imalatları ile hem fonksiyonel hem görsel açıdan güçlü çözümler sunuyoruz.
           </p>
         </div>
       </div>
@@ -144,19 +156,15 @@
       <!-- 3) Pergola & Kamelyalar -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Pergule.jpg"
-                 data-caption="Pergola ve Kamelyalar">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Pergule.jpg','Pergola ve Kamelyalar')">
               <div class="catalog-item__image">
                 <img src="assets/img/yapisal/Pergule.jpg" alt="Pergola">
               </div>
               <div class="catalog-item__label">Pergola</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Kamelya.jpg"
-                 data-caption="Pergola ve Kamelyalar">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Kamelya.jpg','Pergola ve Kamelyalar')">
               <div class="catalog-item__image">
                 <img src="assets/img/yapisal/Kamelya.jpg" alt="Kamelya">
               </div>
@@ -168,8 +176,7 @@
         <div class="content__box">
           <h2>Pergola ve Kamelyalar</h2>
           <p class="muted">
-            Ahşap ve metal pergola sistemleri, kamelyalar ve gölgelik alanlar ile
-            sosyal kullanım alanlarını estetik ve konforlu hale getiriyoruz.
+            Ahşap ve metal pergola sistemleri, kamelyalar ve gölgelik alanlar ile sosyal kullanım alanlarını estetik ve konforlu hale getiriyoruz.
           </p>
         </div>
       </div>
@@ -177,23 +184,19 @@
       <!-- 4) Çocuk Oyun Parkları -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Oyun%20Parki%201.png"
-                 data-caption="Çocuk Oyun Parkları">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Oyun Parki 1.png','Çocuk Oyun Parkları')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Oyun%20Parki%201.png" alt="Oyun Parkı 1">
+                <img src="assets/img/yapisal/Oyun Parki 1.png" alt="Oyun Parkı 1">
               </div>
-              <div class="catalog-item__label">Oyun Parkı</div>
+              <div class="catalog-item__label">Oyun Parkı 1</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Oyun%20Parki%202.jpg"
-                 data-caption="Çocuk Oyun Parkları">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Oyun Parki 2.jpg','Çocuk Oyun Parkları')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Oyun%20Parki%202.jpg" alt="Oyun Parkı 2">
+                <img src="assets/img/yapisal/Oyun Parki 2.jpg" alt="Oyun Parkı 2">
               </div>
-              <div class="catalog-item__label">Oyun Parkı</div>
+              <div class="catalog-item__label">Oyun Parkı 2</div>
             </div>
           </div>
         </div>
@@ -201,8 +204,7 @@
         <div class="content__box">
           <h2>Çocuk Oyun Parkları</h2>
           <p class="muted">
-            Güvenli zeminler, dayanıklı oyun grupları ve standartlara uygun kurulum ile
-            çocuklar için güvenli oyun alanları oluşturuyoruz.
+            Güvenli zeminler, dayanıklı oyun grupları ve standartlara uygun kurulum ile çocuklar için güvenli oyun alanları oluşturuyoruz.
           </p>
         </div>
       </div>
@@ -210,23 +212,19 @@
       <!-- 5) Fitness Alanı -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Fitness%20Alan%201.jpeg"
-                 data-caption="Fitness Alanı">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Fitness Alan 1.jpeg','Fitness Alanı')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Fitness%20Alan%201.jpeg" alt="Fitness Alanı 1">
+                <img src="assets/img/yapisal/Fitness Alan 1.jpeg" alt="Fitness Alanı 1">
               </div>
-              <div class="catalog-item__label">Fitness</div>
+              <div class="catalog-item__label">Fitness 1</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Fitness%20Alan%202.png"
-                 data-caption="Fitness Alanı">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Fitness Alan 2.png','Fitness Alanı')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Fitness%20Alan%202.png" alt="Fitness Alanı 2">
+                <img src="assets/img/yapisal/Fitness Alan 2.png" alt="Fitness Alanı 2">
               </div>
-              <div class="catalog-item__label">Fitness</div>
+              <div class="catalog-item__label">Fitness 2</div>
             </div>
           </div>
         </div>
@@ -234,8 +232,7 @@
         <div class="content__box">
           <h2>Fitness Alanı</h2>
           <p class="muted">
-            Park ve yaşam alanlarında açık hava fitness ekipmanları ile
-            sürdürülebilir spor alanları kuruyoruz.
+            Park ve yaşam alanlarında açık hava fitness ekipmanları ile sürdürülebilir spor alanları kuruyoruz.
           </p>
         </div>
       </div>
@@ -243,19 +240,15 @@
       <!-- 6) Sulama & Altyapı -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="catalog-grid" style="margin-top:0;">
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Otomatik%20Sulama.png"
-                 data-caption="Sulama ve Altyapı">
+          <div class="yapisal-gallery">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Otomatik Sulama.png','Sulama ve Altyapı')">
               <div class="catalog-item__image">
-                <img src="assets/img/yapisal/Otomatik%20Sulama.png" alt="Otomatik Sulama">
+                <img src="assets/img/yapisal/Otomatik Sulama.png" alt="Otomatik Sulama">
               </div>
-              <div class="catalog-item__label">Sulama</div>
+              <div class="catalog-item__label">Otomatik Sulama</div>
             </div>
 
-            <div class="catalog-item"
-                 data-image="assets/img/yapisal/Drenaj.jpg"
-                 data-caption="Sulama ve Altyapı">
+            <div class="catalog-item" onclick="openLightbox('assets/img/yapisal/Drenaj.jpg','Sulama ve Altyapı')">
               <div class="catalog-item__image">
                 <img src="assets/img/yapisal/Drenaj.jpg" alt="Drenaj">
               </div>
@@ -267,8 +260,7 @@
         <div class="content__box">
           <h2>Sulama ve Altyapı</h2>
           <p class="muted">
-            Otomatik sulama, drenaj ve altyapı uygulamaları ile peyzaj alanlarının
-            sürdürülebilirliğini ve bakım kolaylığını sağlıyoruz.
+            Otomatik sulama, drenaj ve altyapı uygulamaları ile peyzaj alanlarının sürdürülebilirliğini ve bakım kolaylığını sağlıyoruz.
           </p>
         </div>
       </div>
@@ -276,7 +268,7 @@
     </div>
   </main>
 
-  <!-- Footer (index ile aynı) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
       <div>
@@ -309,59 +301,47 @@
     </div>
   </footer>
 
-  <!-- Lightbox (CSS zaten style.css içinde var) -->
+  <!-- Lightbox -->
   <div class="catalog-lightbox" id="lightbox">
     <div class="catalog-lightbox__inner">
-      <button class="catalog-lightbox__close" type="button" aria-label="Kapat">×</button>
+      <button class="catalog-lightbox__close" type="button" aria-label="Kapat" onclick="closeLightbox()">×</button>
       <img class="catalog-lightbox__image" id="lightboxImage" src="" alt="">
       <div class="catalog-lightbox__caption" id="lightboxCaption"></div>
     </div>
   </div>
 
   <script>
-    // Lightbox
-    (function () {
-      const items = document.querySelectorAll('.catalog-item');
+    function openLightbox(src, caption){
       const lightbox = document.getElementById('lightbox');
       const img = document.getElementById('lightboxImage');
       const cap = document.getElementById('lightboxCaption');
-      const closeBtn = document.querySelector('.catalog-lightbox__close');
 
-      function openLightbox(src, caption) {
-        img.src = src;
-        cap.textContent = caption || '';
-        lightbox.classList.add('is-open');
-      }
+      img.src = src;
+      cap.textContent = caption || '';
+      lightbox.classList.add('is-open');
+    }
 
-      function closeLightbox() {
-        lightbox.classList.remove('is-open');
-        img.src = '';
-        cap.textContent = '';
-      }
+    function closeLightbox(){
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImage');
+      const cap = document.getElementById('lightboxCaption');
 
-      items.forEach(item => {
-        item.addEventListener('click', () => {
-          const src = item.getAttribute('data-image');
-          const caption = item.getAttribute('data-caption');
-          openLightbox(src, caption);
-        });
-      });
+      lightbox.classList.remove('is-open');
+      img.src = '';
+      cap.textContent = '';
+    }
 
-      closeBtn.addEventListener('click', closeLightbox);
+    // Dış alana tıkla kapat
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if(e.target.id === 'lightbox') closeLightbox();
+    });
 
-      // dış alana tıklayınca kapat
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-      });
-
-      // ESC ile kapat
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLightbox();
-      });
-    })();
+    // ESC ile kapat
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeLightbox();
+    });
   </script>
 
-  <!-- Mobil menü + yıl gibi mevcut davranışlar -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
