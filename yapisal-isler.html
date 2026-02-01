@@ -3,150 +3,365 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Yapısal İşler | Sert Zemin, Pergola, Oyun Parkları | APEG Peyzaj</title>
   <meta name="description" content="APEG Peyzaj; sert zemin uygulamaları, taş duvar ve bordür, pergola ve kamelya, çocuk oyun parkları, fitness alanları ve sulama altyapı sistemleri ile anahtar teslim peyzaj çözümleri sunar." />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+  <!-- Top Bar (index ile aynı) -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+905473386161" class="topbar__link">+90 547 338 61 61</a>
+        <span class="topbar__sep">•</span>
+        <a href="mailto:apeggrup34@gmail.com" class="topbar__link">apeggrup34@gmail.com</a>
+      </div>
 
-<!-- Header (AYNI KALACAK) -->
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark">
-        <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
-      </span>
-    </a>
-
-    <nav class="nav">
-      <a class="nav__link" href="index.html">Anasayfa</a>
-      <a class="nav__link" href="about.html">Hakkımızda</a>
-      <a class="nav__link" href="products.html">Ürünler</a>
-      <a class="nav__link" href="contact.html">İletişim</a>
-      <a class="nav__cta" href="contact.html">Daha Fazla Bilgi</a>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="hero__bg" style="background-image:url('assets/img/yapisal-hero.jpg');"></div>
-  <div class="hero__overlay"></div>
-
-  <div class="container hero__inner">
-    <div class="hero__content">
-      <h1 class="hero__title">Yapısal Peyzaj Uygulamaları</h1>
-      <p class="hero__text">
-        Sert zemin uygulamalarından oyun parklarına, altyapıdan pergola sistemlerine kadar
-        peyzaj projelerinde ihtiyaç duyulan tüm yapısal imalatları anahtar teslim olarak gerçekleştiriyoruz.
-      </p>
+      <div class="topbar__right">
+        <span class="pill">TR</span>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- Content -->
-<main class="section">
-  <div class="container">
+  <!-- Header (index ile aynı) -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="APEG Peyzaj Anasayfa">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
+        </span>
+      </a>
 
-    <!-- Sert Zemin -->
-    <div class="content">
-      <div class="content__box">
-        <img src="assets/img/sert-zemin.jpg" alt="Sert Zemin Uygulamaları">
-      </div>
-      <div class="content__box">
-        <h2>Sert Zemin Uygulamaları</h2>
-        <p class="muted">
-          Kilit taşı, bordür, yürüyüş yolları, meydan ve çevre düzenleme alanlarında
-          uzun ömürlü ve estetik sert zemin uygulamaları yapıyoruz.
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="index.html">Anasayfa</a>
+        <a class="nav__link" href="about.html">Hakkımızda</a>
+        <a class="nav__link" href="products.html">Ürünler</a>
+        <a class="nav__link" href="contact.html">İletişim</a>
+        <a class="nav__cta" href="contact.html">Daha Fazla Bilgi</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Yapısal İşler">
+    <!-- Kapak görseli: senin yüklediğin görsellerden kullandım -->
+    <div class="hero__bg" style="background-image:url('assets/img/yapisal/Zemin%20Uygulama%201.jpg');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__kicker">Yapısal Peyzaj Uygulamaları</p>
+        <h1 class="hero__title">Yapısal İşler</h1>
+        <p class="hero__text">
+          Sert zemin uygulamalarından oyun parklarına, altyapıdan pergola sistemlerine kadar
+          peyzaj projelerinde ihtiyaç duyulan yapısal imalatları anahtar teslim olarak gerçekleştiriyoruz.
         </p>
       </div>
     </div>
+  </section>
 
-    <!-- Taş Duvar -->
-    <div class="content" style="margin-top:32px;">
-      <div class="content__box">
-        <img src="assets/img/tas-duvar.jpg" alt="Taş Duvar ve Bordür">
+  <!-- Content -->
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Uygulama Kalemleri</h2>
+        <p class="section__desc">Fotoğraflara tıklayarak büyütebilirsiniz.</p>
       </div>
-      <div class="content__box">
-        <h2>Taş Duvar ve Bordür</h2>
-        <p class="muted">
-          İstinat duvarları, doğal taş uygulamaları ve bordür imalatları ile
-          hem fonksiyonel hem görsel açıdan güçlü çözümler sunuyoruz.
+
+      <!-- 1) Sert Zemin -->
+      <div class="content">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Zemin%20Uygulama%201.jpg"
+                 data-caption="Sert Zemin Uygulamaları">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Zemin%20Uygulama%201.jpg" alt="Sert Zemin Uygulama 1">
+              </div>
+              <div class="catalog-item__label">Sert Zemin</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Zemin%20Uygulama%202.jpg"
+                 data-caption="Sert Zemin Uygulamaları">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Zemin%20Uygulama%202.jpg" alt="Sert Zemin Uygulama 2">
+              </div>
+              <div class="catalog-item__label">Sert Zemin</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Sert Zemin Uygulamaları</h2>
+          <p class="muted">
+            Kilit taşı, bordür, yürüyüş yolları, meydan ve çevre düzenleme alanlarında
+            uzun ömürlü ve estetik sert zemin imalatları yapıyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2) Taş Duvar & Bordür -->
+      <div class="content" style="margin-top:32px;">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Ta%C5%9F%20duvar%201.jpg"
+                 data-caption="Taş Duvar ve Bordür">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Ta%C5%9F%20duvar%201.jpg" alt="Taş Duvar 1">
+              </div>
+              <div class="catalog-item__label">Taş Duvar</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Ta%C5%9F%20Duvar%202.jpeg"
+                 data-caption="Taş Duvar ve Bordür">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Ta%C5%9F%20Duvar%202.jpeg" alt="Taş Duvar 2">
+              </div>
+              <div class="catalog-item__label">Taş Duvar</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Taş Duvar ve Bordür</h2>
+          <p class="muted">
+            İstinat duvarları, doğal taş uygulamaları ve bordür imalatları ile
+            hem fonksiyonel hem görsel açıdan güçlü çözümler sunuyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3) Pergola & Kamelyalar -->
+      <div class="content" style="margin-top:32px;">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Pergule.jpg"
+                 data-caption="Pergola ve Kamelyalar">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Pergule.jpg" alt="Pergola">
+              </div>
+              <div class="catalog-item__label">Pergola</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Kamelya.jpg"
+                 data-caption="Pergola ve Kamelyalar">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Kamelya.jpg" alt="Kamelya">
+              </div>
+              <div class="catalog-item__label">Kamelya</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Pergola ve Kamelyalar</h2>
+          <p class="muted">
+            Ahşap ve metal pergola sistemleri, kamelyalar ve gölgelik alanlar ile
+            sosyal kullanım alanlarını estetik ve konforlu hale getiriyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4) Çocuk Oyun Parkları -->
+      <div class="content" style="margin-top:32px;">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Oyun%20Parki%201.png"
+                 data-caption="Çocuk Oyun Parkları">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Oyun%20Parki%201.png" alt="Oyun Parkı 1">
+              </div>
+              <div class="catalog-item__label">Oyun Parkı</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Oyun%20Parki%202.jpg"
+                 data-caption="Çocuk Oyun Parkları">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Oyun%20Parki%202.jpg" alt="Oyun Parkı 2">
+              </div>
+              <div class="catalog-item__label">Oyun Parkı</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Çocuk Oyun Parkları</h2>
+          <p class="muted">
+            Güvenli zeminler, dayanıklı oyun grupları ve standartlara uygun kurulum ile
+            çocuklar için güvenli oyun alanları oluşturuyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5) Fitness Alanı -->
+      <div class="content" style="margin-top:32px;">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Fitness%20Alan%201.jpeg"
+                 data-caption="Fitness Alanı">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Fitness%20Alan%201.jpeg" alt="Fitness Alanı 1">
+              </div>
+              <div class="catalog-item__label">Fitness</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Fitness%20Alan%202.png"
+                 data-caption="Fitness Alanı">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Fitness%20Alan%202.png" alt="Fitness Alanı 2">
+              </div>
+              <div class="catalog-item__label">Fitness</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Fitness Alanı</h2>
+          <p class="muted">
+            Park ve yaşam alanlarında açık hava fitness ekipmanları ile
+            sürdürülebilir spor alanları kuruyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6) Sulama & Altyapı -->
+      <div class="content" style="margin-top:32px;">
+        <div class="content__box">
+          <div class="catalog-grid" style="margin-top:0;">
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Otomatik%20Sulama.png"
+                 data-caption="Sulama ve Altyapı">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Otomatik%20Sulama.png" alt="Otomatik Sulama">
+              </div>
+              <div class="catalog-item__label">Sulama</div>
+            </div>
+
+            <div class="catalog-item"
+                 data-image="assets/img/yapisal/Drenaj.jpg"
+                 data-caption="Sulama ve Altyapı">
+              <div class="catalog-item__image">
+                <img src="assets/img/yapisal/Drenaj.jpg" alt="Drenaj">
+              </div>
+              <div class="catalog-item__label">Drenaj</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__box">
+          <h2>Sulama ve Altyapı</h2>
+          <p class="muted">
+            Otomatik sulama, drenaj ve altyapı uygulamaları ile peyzaj alanlarının
+            sürdürülebilirliğini ve bakım kolaylığını sağlıyoruz.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer (index ile aynı) -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand"><strong>APEG</strong> Peyzaj</div>
+        <p class="footer__text">
+          Fidan ve peyzaj ürünlerinde hızlı iletişim, doğru yönlendirme ve güvenilir tedarik.
         </p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <div class="footer__title">Menü</div>
+          <a class="footer__link" href="index.html">Anasayfa</a>
+          <a class="footer__link" href="about.html">Hakkımızda</a>
+          <a class="footer__link" href="products.html">Ürünler</a>
+          <a class="footer__link" href="contact.html">İletişim</a>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">İletişim</div>
+          <a class="footer__link" href="tel:+905473386161">+90 547 338 61 61</a>
+          <a class="footer__link" href="mailto:apeggrup34@gmail.com">apeggrup34@gmail.com</a>
+        </div>
       </div>
     </div>
 
-    <!-- Pergola -->
-    <div class="content" style="margin-top:32px;">
-      <div class="content__box">
-        <img src="assets/img/pergola.jpg" alt="Pergola ve Kamelyalar">
-      </div>
-      <div class="content__box">
-        <h2>Pergola ve Kamelyalar</h2>
-        <p class="muted">
-          Ahşap ve metal pergola sistemleri, kamelyalar ve gölgelik alanlar ile
-          sosyal kullanım alanlarını estetik ve konforlu hale getiriyoruz.
-        </p>
-      </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> APEG Peyzaj</span>
+      <span class="footer__muted">Tüm hakları saklıdır.</span>
     </div>
+  </footer>
 
-    <!-- Oyun Parkı -->
-    <div class="content" style="margin-top:32px;">
-      <div class="content__box">
-        <img src="assets/img/oyun-parki.jpg" alt="Çocuk Oyun Parkları">
-      </div>
-      <div class="content__box">
-        <h2>Çocuk Oyun Parkları</h2>
-        <p class="muted">
-          Güvenli zeminler, sertifikalı oyun grupları ve standartlara uygun
-          çocuk oyun parkı kurulumları gerçekleştiriyoruz.
-        </p>
-      </div>
+  <!-- Lightbox (CSS zaten style.css içinde var) -->
+  <div class="catalog-lightbox" id="lightbox">
+    <div class="catalog-lightbox__inner">
+      <button class="catalog-lightbox__close" type="button" aria-label="Kapat">×</button>
+      <img class="catalog-lightbox__image" id="lightboxImage" src="" alt="">
+      <div class="catalog-lightbox__caption" id="lightboxCaption"></div>
     </div>
-
-    <!-- Fitness -->
-    <div class="content" style="margin-top:32px;">
-      <div class="content__box">
-        <img src="assets/img/fitness.jpg" alt="Açık Alan Fitness">
-      </div>
-      <div class="content__box">
-        <h2>Fitness Alanları</h2>
-        <p class="muted">
-          Açık alan spor ve fitness ekipmanları ile park ve yaşam alanlarına
-          sağlıklı yaşam çözümleri kazandırıyoruz.
-        </p>
-      </div>
-    </div>
-
-    <!-- Sulama -->
-    <div class="content" style="margin-top:32px;">
-      <div class="content__box">
-        <img src="assets/img/sulama.jpg" alt="Sulama ve Altyapı">
-      </div>
-      <div class="content__box">
-        <h2>Sulama ve Altyapı</h2>
-        <p class="muted">
-          Otomatik sulama sistemleri, drenaj ve altyapı uygulamaları ile
-          peyzaj alanlarının sürdürülebilirliğini sağlıyoruz.
-        </p>
-      </div>
-    </div>
-
   </div>
-</main>
 
-<!-- Footer (AYNI KALACAK) -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <strong>APEG Peyzaj</strong>
-      <p class="footer__text">
-        Peyzaj projelerinde yapısal uygulamalar ve güvenilir saha çözümleri.
-      </p>
-    </div>
-  </div>
-</footer>
+  <script>
+    // Lightbox
+    (function () {
+      const items = document.querySelectorAll('.catalog-item');
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImage');
+      const cap = document.getElementById('lightboxCaption');
+      const closeBtn = document.querySelector('.catalog-lightbox__close');
 
+      function openLightbox(src, caption) {
+        img.src = src;
+        cap.textContent = caption || '';
+        lightbox.classList.add('is-open');
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        img.src = '';
+        cap.textContent = '';
+      }
+
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-image');
+          const caption = item.getAttribute('data-caption');
+          openLightbox(src, caption);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+
+      // dış alana tıklayınca kapat
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      // ESC ile kapat
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+
+  <!-- Mobil menü + yıl gibi mevcut davranışlar -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
