@@ -291,29 +291,47 @@
   </div>
 
   <script>
-    function openLightbox(src, caption){
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightboxImage');
-      const cap = document.getElementById('lightboxCaption');
-      img.src = src;
-      cap.textContent = caption || '';
-      lightbox.classList.add('is-open');
-    }
-    function closeLightbox(){
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightboxImage');
-      const cap = document.getElementById('lightboxCaption');
-      lightbox.classList.remove('is-open');
-      img.src = '';
-      cap.textContent = '';
-    }
-    document.getElementById('lightbox').addEventListener('click', (e) => {
-      if(e.target.id === 'lightbox') closeLightbox();
+  function openLightbox(src, caption){
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightboxImage');
+    const cap = document.getElementById('lightboxCaption');
+
+    // ✅ Türkçe karakter + boşluklar için kesin çözüm
+    const safeSrc = encodeURI(src);
+
+    img.src = safeSrc;
+    cap.textContent = caption || '';
+    lightbox.classList.add('is-open');
+  }
+
+  function closeLightbox(){
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightboxImage');
+    const cap = document.getElementById('lightboxCaption');
+    lightbox.classList.remove('is-open');
+    img.src = '';
+    cap.textContent = '';
+  }
+
+  // ✅ sayfanın içindeki bütün yapisal resimlerini otomatik encode et
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+      const s = img.getAttribute('src');
+      if (!s) return;
+      if (s.includes('assets/img/yapisal/')) {
+        img.setAttribute('src', encodeURI(s));
+      }
     });
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') closeLightbox();
-    });
-  </script>
+  });
+
+  document.getElementById('lightbox')?.addEventListener('click', (e) => {
+    if(e.target.id === 'lightbox') closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
 
   <script src="assets/js/main.js"></script>
 </body>
