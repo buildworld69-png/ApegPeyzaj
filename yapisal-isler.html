@@ -7,11 +7,10 @@
   <title>Yapısal İşler | Sert Zemin, Pergola, Oyun Parkları | APEG Peyzaj</title>
   <meta name="description" content="APEG Peyzaj; sert zemin uygulamaları, taş duvar ve bordür, pergola ve kamelya, çocuk oyun parkları, fitness alanları ve sulama altyapı sistemleri ile anahtar teslim peyzaj çözümleri sunar." />
 
-  <!-- Çalı Ağaçlar gibi: relative -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- ✅ MUTLAK: / ile başlar -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <style>
-    /* Çalı Ağaçlar mantığı: 2'li grid */
     .yapisal-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -20,11 +19,8 @@
     @media (max-width: 680px){
       .yapisal-grid{ grid-template-columns: 1fr; }
     }
-
-    /* Kart resim oranı */
     .yapisal-grid .catalog-item__image{ padding-top: 62%; }
 
-    /* Buton görünümü bozmasın */
     .yapisal-grid .catalog-item{
       width:100%;
       text-align:left;
@@ -50,26 +46,26 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="Anasayfa">
+      <a class="brand" href="/index.html" aria-label="Anasayfa">
         <span class="brand__mark" aria-hidden="true">
-          <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
+          <img src="/assets/img/logo.png" alt="APEG Peyzaj Logo">
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" data-nav>
-        <a class="nav__link" href="index.html">Anasayfa</a>
-        <a class="nav__link" href="about.html">Hakkımızda</a>
-        <a class="nav__link" href="products.html">Ürünler</a>
-        <a class="nav__link" href="contact.html">İletişim</a>
-        <a class="nav__cta" href="contact.html">Daha Fazla Bilgi</a>
+        <a class="nav__link" href="/index.html">Anasayfa</a>
+        <a class="nav__link" href="/about.html">Hakkımızda</a>
+        <a class="nav__link" href="/products.html">Ürünler</a>
+        <a class="nav__link" href="/contact.html">İletişim</a>
+        <a class="nav__cta" href="/contact.html">Daha Fazla Bilgi</a>
       </nav>
     </div>
   </header>
 
   <section class="hero" aria-label="Yapısal İşler">
-    <div class="hero__bg" style="background-image:url('assets/img/yapisal/zemin-1.jpg');"></div>
+    <div class="hero__bg" style="background-image:url('/assets/img/yapisal/zemin-1.jpg');"></div>
     <div class="hero__overlay"></div>
 
     <div class="container hero__inner">
@@ -94,13 +90,13 @@
       <div class="content">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/zemin-1.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/zemin-1.jpg" alt="Sert Zemin 1"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/zemin-1.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/zemin-1.jpg" alt="Sert Zemin 1"></div>
               <div class="catalog-item__label">Sert Zemin 1</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/zemin-2.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/zemin-2.jpg" alt="Sert Zemin 2"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/zemin-2.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/zemin-2.jpg" alt="Sert Zemin 2"></div>
               <div class="catalog-item__label">Sert Zemin 2</div>
             </button>
           </div>
@@ -116,13 +112,13 @@
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/tas-duvar-1.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/tas-duvar-1.jpg" alt="Taş Duvar 1"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/tas-duvar-1.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/tas-duvar-1.jpg" alt="Taş Duvar 1"></div>
               <div class="catalog-item__label">Taş Duvar 1</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/tas-duvar-2.jpeg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/tas-duvar-2.jpeg" alt="Taş Duvar 2"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/tas-duvar-2.jpeg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/tas-duvar-2.jpeg" alt="Taş Duvar 2"></div>
               <div class="catalog-item__label">Taş Duvar 2</div>
             </button>
           </div>
@@ -138,13 +134,13 @@
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/pergola.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/pergola.jpg" alt="Pergola"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/pergola.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/pergola.jpg" alt="Pergola"></div>
               <div class="catalog-item__label">Pergola</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/kamelya.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/kamelya.jpg" alt="Kamelya"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/kamelya.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/kamelya.jpg" alt="Kamelya"></div>
               <div class="catalog-item__label">Kamelya</div>
             </button>
           </div>
@@ -160,13 +156,13 @@
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/oyun-parki-1.png">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/oyun-parki-1.png" alt="Oyun Parkı 1"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/oyun-parki-1.png">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/oyun-parki-1.png" alt="Oyun Parkı 1"></div>
               <div class="catalog-item__label">Oyun Parkı 1</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/oyun-parki-2.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/oyun-parki-2.jpg" alt="Oyun Parkı 2"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/oyun-parki-2.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/oyun-parki-2.jpg" alt="Oyun Parkı 2"></div>
               <div class="catalog-item__label">Oyun Parkı 2</div>
             </button>
           </div>
@@ -182,13 +178,13 @@
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/fitness-1.jpeg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/fitness-1.jpeg" alt="Fitness 1"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/fitness-1.jpeg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/fitness-1.jpeg" alt="Fitness 1"></div>
               <div class="catalog-item__label">Fitness 1</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/fitness-2.png">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/fitness-2.png" alt="Fitness 2"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/fitness-2.png">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/fitness-2.png" alt="Fitness 2"></div>
               <div class="catalog-item__label">Fitness 2</div>
             </button>
           </div>
@@ -204,13 +200,13 @@
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
           <div class="yapisal-grid">
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/otomatik-sulama.png">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/otomatik-sulama.png" alt="Otomatik Sulama"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/otomatik-sulama.png">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/otomatik-sulama.png" alt="Otomatik Sulama"></div>
               <div class="catalog-item__label">Otomatik Sulama</div>
             </button>
 
-            <button class="catalog-item" type="button" data-image="assets/img/yapisal/drenaj.jpg">
-              <div class="catalog-item__image"><img src="assets/img/yapisal/drenaj.jpg" alt="Drenaj"></div>
+            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/drenaj.jpg">
+              <div class="catalog-item__image"><img src="/assets/img/yapisal/drenaj.jpg" alt="Drenaj"></div>
               <div class="catalog-item__label">Drenaj</div>
             </button>
           </div>
@@ -225,7 +221,7 @@
     </div>
   </main>
 
-  <!-- Çalı Ağaçlar ile aynı lightbox -->
+  <!-- Lightbox -->
   <div class="catalog-lightbox" id="catalogLightbox" aria-hidden="true">
     <div class="catalog-lightbox__inner">
       <button class="catalog-lightbox__close" type="button" aria-label="Kapat">&times;</button>
@@ -272,6 +268,6 @@
     });
   </script>
 
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
