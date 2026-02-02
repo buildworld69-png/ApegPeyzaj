@@ -7,20 +7,32 @@
   <title>Yapısal İşler | Sert Zemin, Pergola, Oyun Parkları | APEG Peyzaj</title>
   <meta name="description" content="APEG Peyzaj; sert zemin uygulamaları, taş duvar ve bordür, pergola ve kamelya, çocuk oyun parkları, fitness alanları ve sulama altyapı sistemleri ile anahtar teslim peyzaj çözümleri sunar." />
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- Çalı Ağaçlar gibi: relative -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    .yapisal-gallery{
+    /* Çalı Ağaçlar mantığı: 2'li grid */
+    .yapisal-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:14px;
-      margin-top:0;
     }
-    @media (max-width: 560px){
-      .yapisal-gallery{ grid-template-columns: 1fr; }
+    @media (max-width: 680px){
+      .yapisal-grid{ grid-template-columns: 1fr; }
     }
-    .yapisal-gallery .catalog-item__image{ padding-top: 62%; }
-    .yapisal-gallery .catalog-item__label{ padding: 8px 10px; font-size: 12px; }
+
+    /* Kart resim oranı */
+    .yapisal-grid .catalog-item__image{ padding-top: 62%; }
+
+    /* Buton görünümü bozmasın */
+    .yapisal-grid .catalog-item{
+      width:100%;
+      text-align:left;
+      border:0;
+      background:transparent;
+      padding:0;
+      cursor:pointer;
+    }
   </style>
 </head>
 
@@ -38,26 +50,26 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="/index.html" aria-label="Anasayfa">
+      <a class="brand" href="index.html" aria-label="Anasayfa">
         <span class="brand__mark" aria-hidden="true">
-          <img src="/assets/img/logo.png" alt="APEG Peyzaj Logo">
+          <img src="assets/img/logo.png" alt="APEG Peyzaj Logo">
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" data-nav>
-        <a class="nav__link" href="/index.html">Anasayfa</a>
-        <a class="nav__link" href="/about.html">Hakkımızda</a>
-        <a class="nav__link" href="/products.html">Ürünler</a>
-        <a class="nav__link" href="/contact.html">İletişim</a>
-        <a class="nav__cta" href="/contact.html">Daha Fazla Bilgi</a>
+        <a class="nav__link" href="index.html">Anasayfa</a>
+        <a class="nav__link" href="about.html">Hakkımızda</a>
+        <a class="nav__link" href="products.html">Ürünler</a>
+        <a class="nav__link" href="contact.html">İletişim</a>
+        <a class="nav__cta" href="contact.html">Daha Fazla Bilgi</a>
       </nav>
     </div>
   </header>
 
   <section class="hero" aria-label="Yapısal İşler">
-    <div class="hero__bg" style="background-image:url('/assets/img/yapisal/zemin-1.jpg');"></div>
+    <div class="hero__bg" style="background-image:url('assets/img/yapisal/zemin-1.jpg');"></div>
     <div class="hero__overlay"></div>
 
     <div class="container hero__inner">
@@ -81,17 +93,19 @@
       <!-- 1) Sert Zemin -->
       <div class="content">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/zemin-1.jpg" data-caption="Sert Zemin Uygulamaları">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/zemin-1.jpg" alt="Sert Zemin 1"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/zemin-1.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/zemin-1.jpg" alt="Sert Zemin 1"></div>
               <div class="catalog-item__label">Sert Zemin 1</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/zemin-2.jpg" data-caption="Sert Zemin Uygulamaları">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/zemin-2.jpg" alt="Sert Zemin 2"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/zemin-2.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/zemin-2.jpg" alt="Sert Zemin 2"></div>
               <div class="catalog-item__label">Sert Zemin 2</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Sert Zemin Uygulamaları</h2>
           <p class="muted">Kilit taşı, bordür, yürüyüş yolları ve çevre düzenlemede uzun ömürlü sert zemin imalatları yapıyoruz.</p>
@@ -101,17 +115,19 @@
       <!-- 2) Taş Duvar -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/tas-duvar-1.jpg" data-caption="Taş Duvar ve Bordür">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/tas-duvar-1.jpg" alt="Taş Duvar 1"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/tas-duvar-1.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/tas-duvar-1.jpg" alt="Taş Duvar 1"></div>
               <div class="catalog-item__label">Taş Duvar 1</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/tas-duvar-2.jpeg" data-caption="Taş Duvar ve Bordür">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/tas-duvar-2.jpeg" alt="Taş Duvar 2"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/tas-duvar-2.jpeg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/tas-duvar-2.jpeg" alt="Taş Duvar 2"></div>
               <div class="catalog-item__label">Taş Duvar 2</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Taş Duvar ve Bordür</h2>
           <p class="muted">İstinat duvarı, doğal taş ve bordür imalatları ile hem fonksiyonel hem estetik çözümler sunuyoruz.</p>
@@ -121,17 +137,19 @@
       <!-- 3) Pergola & Kamelya -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/pergola.jpg" data-caption="Pergola ve Kamelyalar">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/pergola.jpg" alt="Pergola"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/pergola.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/pergola.jpg" alt="Pergola"></div>
               <div class="catalog-item__label">Pergola</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/kamelya.jpg" data-caption="Pergola ve Kamelyalar">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/kamelya.jpg" alt="Kamelya"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/kamelya.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/kamelya.jpg" alt="Kamelya"></div>
               <div class="catalog-item__label">Kamelya</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Pergola ve Kamelyalar</h2>
           <p class="muted">Ahşap/metal pergola sistemleri ve kamelyalar ile gölgelik sosyal alanlar oluşturuyoruz.</p>
@@ -141,17 +159,19 @@
       <!-- 4) Oyun Parkı -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/oyun-parki-1.png" data-caption="Çocuk Oyun Parkları">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/oyun-parki-1.png" alt="Oyun Parkı 1"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/oyun-parki-1.png">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/oyun-parki-1.png" alt="Oyun Parkı 1"></div>
               <div class="catalog-item__label">Oyun Parkı 1</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/oyun-parki-2.jpg" data-caption="Çocuk Oyun Parkları">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/oyun-parki-2.jpg" alt="Oyun Parkı 2"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/oyun-parki-2.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/oyun-parki-2.jpg" alt="Oyun Parkı 2"></div>
               <div class="catalog-item__label">Oyun Parkı 2</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Çocuk Oyun Parkları</h2>
           <p class="muted">Güvenli zemin ve standartlara uygun kurulum ile çocuklar için dayanıklı oyun alanları kuruyoruz.</p>
@@ -161,17 +181,19 @@
       <!-- 5) Fitness -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/fitness-1.jpeg" data-caption="Fitness Alanı">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/fitness-1.jpeg" alt="Fitness 1"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/fitness-1.jpeg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/fitness-1.jpeg" alt="Fitness 1"></div>
               <div class="catalog-item__label">Fitness 1</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/fitness-2.png" data-caption="Fitness Alanı">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/fitness-2.png" alt="Fitness 2"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/fitness-2.png">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/fitness-2.png" alt="Fitness 2"></div>
               <div class="catalog-item__label">Fitness 2</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Fitness Alanı</h2>
           <p class="muted">Açık hava fitness ekipmanları ile sürdürülebilir spor alanları kuruyoruz.</p>
@@ -181,17 +203,19 @@
       <!-- 6) Sulama & Altyapı -->
       <div class="content" style="margin-top:32px;">
         <div class="content__box">
-          <div class="yapisal-gallery">
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/otomatik-sulama.png" data-caption="Sulama ve Altyapı">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/otomatik-sulama.png" alt="Otomatik Sulama"></div>
+          <div class="yapisal-grid">
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/otomatik-sulama.png">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/otomatik-sulama.png" alt="Otomatik Sulama"></div>
               <div class="catalog-item__label">Otomatik Sulama</div>
             </button>
-            <button class="catalog-item" type="button" data-image="/assets/img/yapisal/drenaj.jpg" data-caption="Sulama ve Altyapı">
-              <div class="catalog-item__image"><img src="/assets/img/yapisal/drenaj.jpg" alt="Drenaj"></div>
+
+            <button class="catalog-item" type="button" data-image="assets/img/yapisal/drenaj.jpg">
+              <div class="catalog-item__image"><img src="assets/img/yapisal/drenaj.jpg" alt="Drenaj"></div>
               <div class="catalog-item__label">Drenaj</div>
             </button>
           </div>
         </div>
+
         <div class="content__box">
           <h2>Sulama ve Altyapı</h2>
           <p class="muted">Otomatik sulama, drenaj ve altyapı uygulamaları ile bakım kolaylığı ve sürdürülebilirlik sağlıyoruz.</p>
@@ -201,7 +225,7 @@
     </div>
   </main>
 
-  <!-- Lightbox -->
+  <!-- Çalı Ağaçlar ile aynı lightbox -->
   <div class="catalog-lightbox" id="catalogLightbox" aria-hidden="true">
     <div class="catalog-lightbox__inner">
       <button class="catalog-lightbox__close" type="button" aria-label="Kapat">&times;</button>
@@ -221,11 +245,11 @@
       items.forEach(function (item) {
         item.addEventListener('click', function () {
           const imgSrc = item.getAttribute('data-image');
-          const caption = item.getAttribute('data-caption') || '';
+          const label = item.querySelector('.catalog-item__label').innerText.trim();
 
           imageEl.src = imgSrc;
-          imageEl.alt = caption;
-          captionEl.textContent = caption;
+          imageEl.alt = label;
+          captionEl.textContent = label;
 
           lightbox.classList.add('is-open');
           document.body.style.overflow = 'hidden';
@@ -248,6 +272,6 @@
     });
   </script>
 
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
