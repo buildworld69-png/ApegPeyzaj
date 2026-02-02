@@ -574,3 +574,18 @@ img{max-width:100%;display:block}
   .brand{gap:16px;}
 }
 
+/* YAPISAL İŞLER – IMG ZORLA GÖRÜNÜR */
+.catalog-item__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 1 !important;
+}
+
