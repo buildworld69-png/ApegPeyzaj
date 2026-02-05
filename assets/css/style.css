@@ -589,3 +589,22 @@ img{max-width:100%;display:block}
   opacity: 1 !important;
 }
 
+/* Language switch */
+.lang-switch{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.lang{
+  font-size:16px;
+  padding:6px 8px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  opacity:.6;
+}
+.lang:hover{opacity:1}
+.lang.is-active{
+  opacity:1;
+  background: rgba(255,255,255,.08);
+}
+
